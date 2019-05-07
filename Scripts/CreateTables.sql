@@ -1,4 +1,4 @@
-﻿IF OBJECT_ID('dbo.Address', 'U') IS NOT NULL DROP TABLE [dbo].[Address];
+IF OBJECT_ID('dbo.Address', 'U') IS NOT NULL DROP TABLE [dbo].[Address];
 IF OBJECT_ID('dbo.ProvinceState', 'U') IS NOT NULL DROP TABLE [dbo].[ProvinceState];
 IF OBJECT_ID('dbo.Contact', 'U') IS NOT NULL DROP TABLE [dbo].[Contact];
 IF OBJECT_ID('dbo.Country', 'U') IS NOT NULL DROP TABLE [dbo].[Country];
@@ -15,10 +15,10 @@ CREATE TABLE [dbo].[Contact] (
     [Title] VARCHAR(10) NOT NULL,
     [Gender] CHAR(1) NULL,
     [DateOfBirth] DATE NULL,
-	[CreatedDate] DATETIME2 NULL,
-	[ModifiedDate] DATETIME2 NULL,
-	[Active] BIT NULL,
-	PRIMARY KEY (Id)
+    [CreatedDate] DATETIME2 NULL,
+    [ModifiedDate] DATETIME2 NULL,
+    [Active] BIT NULL,
+    PRIMARY KEY (Id)
 );
 
 CREATE TABLE [dbo].[Address] (
@@ -28,27 +28,27 @@ CREATE TABLE [dbo].[Address] (
     [Address2] VARCHAR (255) NULL,
     [City] VARCHAR (255) NOT NULL,
     [ProvinceStateId] INT NOT NULL,
-	[PostalZip] VARCHAR (10) NOT NULL,
-	[PhoneNumber] VARCHAR (10) NOT NULL,
-	[CountryId] INT NOT NULL,
-	[CreatedDate] DATETIME2 NULL,
-	[ModifiedDate] DATETIME2 NULL,
-	PRIMARY KEY (Id)
+    [PostalZip] VARCHAR (10) NOT NULL,
+    [PhoneNumber] VARCHAR (10) NOT NULL,
+    [CountryId] INT NOT NULL,
+    [CreatedDate] DATETIME2 NULL,
+    [ModifiedDate] DATETIME2 NULL,
+    PRIMARY KEY (Id)
 );
 
 CREATE TABLE [dbo].[ProvinceState] (
     [Id] INT IDENTITY (1, 1) NOT NULL,
     [Name] VARCHAR (255) NOT NULL,
     [Code] CHAR(2) NOT NULL,
-	[CountryId] INT NOT NULL
-	PRIMARY KEY (Id)
+    [CountryId] INT NOT NULL
+    PRIMARY KEY (Id)
 );
 
 CREATE TABLE [dbo].[Country] (
     [Id] INT IDENTITY (1, 1) NOT NULL,
     [Name] VARCHAR (255) NOT NULL,
     [Code] CHAR(3)  NOT NULL
-	PRIMARY KEY (Id)
+	  PRIMARY KEY (Id)
 );
 
 ALTER TABLE [dbo].[Address] ADD CONSTRAINT FK_ContactId FOREIGN KEY ([ContactId]) REFERENCES [dbo].[Contact]([Id]);
