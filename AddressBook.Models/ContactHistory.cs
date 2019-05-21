@@ -15,6 +15,7 @@ namespace AddressBook.Models
     public partial class ContactHistory
     {
         public int Id { get; set; }
+        public int ContactId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Title { get; set; }
@@ -23,5 +24,6 @@ namespace AddressBook.Models
         public System.DateTime CreatedDate { get; set; }
         public System.DateTime ModifiedDate { get; set; }
         public string Active { get; set; }
+        public string Action { get; set; }
     }
 }

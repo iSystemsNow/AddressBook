@@ -51,7 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Address.cs">
-      <DependentUpon>AddressBookModel.tt</DependentUpon>
+      <DependentUpon>AddressModelReo.tt</DependentUpon>
     </Compile>
     <Compile Include="AddressBookModel.Context.cs">
       <AutoGen>True</AutoGen>
@@ -69,20 +69,35 @@
       <DependentUpon>AddressBookModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="AddressHistory.cs">
-      <DependentUpon>AddressBookModel.tt</DependentUpon>
+      <DependentUpon>AddressModelReo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AddressModelReo.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AddressModelReo.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AddressModelReo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AddressModelReo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AddressModelReo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AddressModelReo.edmx</DependentUpon>
     </Compile>
     <Compile Include="Contact.cs">
-      <DependentUpon>AddressBookModel.tt</DependentUpon>
+      <DependentUpon>AddressModelReo.tt</DependentUpon>
     </Compile>
     <Compile Include="ContactHistory.cs">
-      <DependentUpon>AddressBookModel.tt</DependentUpon>
+      <DependentUpon>AddressModelReo.tt</DependentUpon>
     </Compile>
     <Compile Include="Country.cs">
-      <DependentUpon>AddressBookModel.tt</DependentUpon>
+      <DependentUpon>AddressModelReo.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProvinceState.cs">
-      <DependentUpon>AddressBookModel.tt</DependentUpon>
+      <DependentUpon>AddressModelReo.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -94,6 +109,13 @@
   <ItemGroup>
     <None Include="AddressBookModel.edmx.diagram">
       <DependentUpon>AddressBookModel.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="AddressModelReo.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AddressModelReo.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="AddressModelReo.edmx.diagram">
+      <DependentUpon>AddressModelReo.edmx</DependentUpon>
     </None>
     <None Include="App.Config" />
     <None Include="packages.config" />
@@ -108,6 +130,16 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>AddressBookModel.edmx</DependentUpon>
       <LastGenOutput>AddressBookModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="AddressModelReo.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AddressModelReo.edmx</DependentUpon>
+      <LastGenOutput>AddressModelReo.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="AddressModelReo.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AddressModelReo.edmx</DependentUpon>
+      <LastGenOutput>AddressModelReo.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
