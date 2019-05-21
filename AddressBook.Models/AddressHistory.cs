@@ -15,6 +15,7 @@ namespace AddressBook.Models
     public partial class AddressHistory
     {
         public int Id { get; set; }
+        public int AddressId { get; set; }
         public int ContactId { get; set; }
         public string Address1 { get; set; }
         public string Address2 { get; set; }
